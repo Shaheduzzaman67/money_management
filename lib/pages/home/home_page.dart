@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:money_tracker/pages/home/widgets/custom_text.dart';
+import 'package:money_tracker/pages/index.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -9,13 +9,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.menu),
         title: const Text("Home"),
-        actions: <Widget>[
-          Icon(Icons.add_call),
-        ],
         centerTitle: true,
       ),
+      drawer: Menu(),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
